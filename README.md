@@ -2,7 +2,7 @@
 
 Welcome to the cass information system github repository.
 
-The application contains a web api written in .NET 7(C#). 
+This application contains a web api written in .NET 7(C#) and a angular application. 
 
 To run the application there are three steps you need to perform.
 
