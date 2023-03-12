@@ -9,8 +9,8 @@ To run the application there are three steps you need to perform.
 1: If you are using dotnet cli, go to the the project "cass-information-system\CassInformationSystemApi". And execute this command: "dotnet run". And if you are using visual studio, open the solution file using visual studio and then in the top bar click on the run button and change the selected option to "http" and then run the application.
 
 2: Microsoft Sql Server is used for database functionality. You will have to set up the database to run the project succesfully. 
-  ConnectionString that I used for my local development envoirenment is :   return
-  "Server=.;Database=CassDB;Trusted_Connection=True;Encrypt=False".  return
+  ConnectionString that I used for my local development envoirenment is :   <br>
+  "Server=.;Database=CassDB;Trusted_Connection=True;Encrypt=False".  <br>
   Note: You can change the connection string according to your system by going into the appsettings.json file and change the default connection string.
         Also make sure that you make database CassDB in the root of Databases folder of SQLServer localhost instance.
 
