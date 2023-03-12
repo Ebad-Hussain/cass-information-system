@@ -1,0 +1,60 @@
+The generated code of [Shipper_Shipment_Details] Stored Procedure:
+
+---------------------------------------------------------------------------------------------------------------------------------
+USE [CassDB]
+GO
+/****** Object:  StoredProcedure [dbo].[Shipper_Shipment_Details]    Script Date: 3/13/2023 2:27:19 AM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+ALTER PROCEDURE [dbo].[Shipper_Shipment_Details]
+    @shipper_id INT
+AS
+BEGIN
+    SELECT 
+        s.shipment_id,
+        sh.shipper_name,
+        c.carrier_name,
+        s.shipment_description,
+        s.shipment_weight,
+        sr.shipment_rate_description
+    FROM 
+        Shipment s
+        INNER JOIN Shipper sh ON s.shipper_id = sh.shipper_id
+        INNER JOIN Carrier c ON s.carrier_id = c.carrier_id
+        INNER JOIN Shipment_Rate sr ON s.shipment_rate_id = sr.shipment_rate_id
+    WHERE 
+        s.shipper_id = @shipper_id
+    ORDER BY 
+        s.shipment_id
+END
+----------------------------------------------------------------------------------------------------------------------------------
+
+
+The script that I used to create this store procedure is:
+----------------------------------------------------------------------------------------------------------------------------------
+
+CREATE PROCEDURE Shipper_Shipment_Details
+    @shipper_id INT
+AS
+BEGIN
+    SELECT 
+        s.shipment_id,
+        sh.shipper_name,
+        c.carrier_name,
+        s.shipment_description,
+        s.shipment_weight,
+        sr.shipment_rate_description
+    FROM 
+        Shipment s
+        INNER JOIN Shipper sh ON s.shipper_id = sh.shipper_id
+        INNER JOIN Carrier c ON s.carrier_id = c.carrier_id
+        INNER JOIN Shipment_Rate sr ON s.shipment_rate_id = sr.shipment_rate_id
+    WHERE 
+        s.shipper_id = @shipper_id
+    ORDER BY 
+        s.shipment_id
+END
+-----------------------------------------------------------------------------------------------------------------------------------
