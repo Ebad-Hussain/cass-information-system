@@ -6,7 +6,7 @@ This application contains a web api written in .NET 7(C#) and a angular applicat
 
 To run the application there are three steps you need to perform.
 
-1: If you are using dotnet cli, go to the the project "cass-information-system\CassInformationSystemApi". And execute this command: "dotnet run".
+1: If you are using dotnet cli, go to the the project "cass-information-system\CassInformationSystemApi". And execute this command: "dotnet run". And if you are using visual studio, open the solution file using visual studio and then in the top bar click on the run button and change the selected option to "http" and then run the application.
 
 2: Microsoft Sql Server is used for database functionality. You will have to set up the database to run the project succesfully. 
   ConnectionString that I used for my local development envoirenment is : "Server=.;Database=CassDB;Trusted_Connection=True;Encrypt=False"
