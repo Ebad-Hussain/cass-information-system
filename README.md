@@ -10,7 +10,7 @@ To run the application there are three steps you need to perform.
 
 2: Microsoft Sql Server is used for database functionality. You will have to set up the database to run the project succesfully. 
   ConnectionString that I used for my local development envoirenment is :   <br>
-  "Server=.;Database=CassDB;Trusted_Connection=True;Encrypt=False".  <br>
+    - "Server=.;Database=CassDB;Trusted_Connection=True;Encrypt=False".  <br>
   Note: You can change the connection string according to your system by going into the appsettings.json file and change the default connection string.
         Also make sure that you make database CassDB in the root of Databases folder of SQLServer localhost instance.
 
